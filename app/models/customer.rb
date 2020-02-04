@@ -50,7 +50,7 @@ class Customer
   end
 
   def self.find_by_name(name)
-    self.all.map do |n|
+    self.all.select do |n|
       n.full_name
     end
   end
