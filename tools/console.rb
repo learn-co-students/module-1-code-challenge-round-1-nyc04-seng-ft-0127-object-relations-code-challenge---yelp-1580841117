@@ -1,5 +1,7 @@
 require_relative '../config/environment.rb'
 
+Customer.full_name("Daryl Corbin")
+
 def reload
   load 'config/environment.rb'
 end
