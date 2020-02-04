@@ -29,7 +29,7 @@ class Customer
   end
 
   def num_reviews
-    Review.all.reduce(0) {|num, review| review.customer == self ? num + 1 : num + 0}
+    Review.all.reduce(0) {|num, review| review.customer == self ? num + 1 : num}
   end
 
   def self.find_by_name(name)
