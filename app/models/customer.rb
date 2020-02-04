@@ -1,12 +1,34 @@
 class Customer
-  attr_accessor :given_name, :family_name
+attr_accessor :given_name, :family_name
+@@all = []
+
 
   def initialize(given_name, family_name)
     @given_name = given_name
     @family_name  = family_name
+    @@all << self
+  end
+
+  def self.all
+    @@all
   end
 
   def full_name
     "#{given_name} #{family_name}"
   end
+
+  def given_name
+    @given_name
+  end
+
+  def family_name
+     @family_name
+  end
+
+  def visited
+    Review.all.map{|restaurant|}
+    
+  end
+
+  
 end
